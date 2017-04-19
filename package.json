@@ -1,1 +1,40 @@
-{     "devDependencies": {         "postcss-pxtorem": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-postcss-pxtorem",     "homepage": "https://github.com/npmtest/node-npmtest-postcss-pxtorem",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-postcss-pxtorem.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### test coverage for  [postcss-pxtorem (v4.0.0)](https://github.com/cuth/postcss-pxtorem#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-postcss-pxtorem.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-postcss-pxtorem) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-postcss-pxtorem.svg)](https://travis-ci.org/npmtest/node-npmtest-postcss-pxtorem)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "postcss-pxtorem": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-postcss-pxtorem",
+    "keywords": [
+        "coverage",
+        "test",
+        "postcss-pxtorem"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_postcss_pxtorem.js",
+    "name": "npmtest-postcss-pxtorem",
+    "nameAlias": "npmtest_postcss_pxtorem",
+    "nameOriginal": "npmtest-postcss-pxtorem",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-postcss-pxtorem.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
